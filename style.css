@@ -379,7 +379,9 @@ input[type='search'] {
     -webkit-transform: scale(1.02);
     transform: scale(1.02);
 }
-
+#js-content{
+    background-color: var(--c-body-background-light);
+}
 .show-more {
     display: inline-block;
     cursor: pointer;
