@@ -253,7 +253,7 @@ input[type='search'] {
 .results a {
     display: block;
     padding: 10px 20px;
-    color: white;
+    color: #FFFDD8;
     text-decoration: none;
     margin: 5px 0;
     background: rgba(255, 255, 255, 0.1);
@@ -275,7 +275,7 @@ input[type='search'] {
 .results h5 {
     display: block;
     padding: 10px 0;
-    color: white;
+    color: #FFFDD8;
     text-decoration: none;
     margin: 5px 1rem;
     margin-top: -10px;
@@ -362,7 +362,7 @@ input[type='search'] {
     text-transform: uppercase;
     font-size: 0.6rem;
     padding: 5px 8px;
-    color: white;
+    color: #FFFDD8;
     font-weight: 900;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
