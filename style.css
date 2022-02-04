@@ -17,13 +17,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 }
 html,
 body {
-    background-color: var(--c-body-background-light);
+    background-color: var(--c-body-background);
 }
 
 a:not([class]) {
@@ -159,12 +156,14 @@ input[type='search'] {
     font-weight: bold;
 }
 .search {
-    margin-top: 20px ;
     max-width: 100%;
     display: block;
     position: absolute;
     padding: 10px 0 20px 0;
-    background: var(--g-search-bar-backround);
+    background: var(--c-search-bg-fallback);
+    background: var(--g-moz-search-gradient);
+    background: var(--g-webkit-search-gradient);
+    background: var(--g-search-gradient);
     overflow-x: hidden;
     box-shadow: var(--c-search-boxshadow);
     z-index: 1;
@@ -254,10 +253,28 @@ input[type='search'] {
     -webkit-text-fill-color: transparent;
     opacity: 0.7; /* Firefox */
 }
+
+.search-bar:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--c-search-placeholder);
+    background: var(--c-search-placeholder-clip);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.7;
+}
+
+.search-bar::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--c-search-placeholder);
+    background: var(--c-search-placeholder-clip);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.7;
+}
 .results a {
     display: block;
     padding: 10px 20px;
-    color: #FFFDD8;
+    color: white;
     text-decoration: none;
     margin: 5px 0;
     background: rgba(255, 255, 255, 0.1);
@@ -279,7 +296,7 @@ input[type='search'] {
 .results h5 {
     display: block;
     padding: 10px 0;
-    color: #FFFDD8;
+    color: white;
     text-decoration: none;
     margin: 5px 1rem;
     margin-top: -10px;
@@ -366,7 +383,7 @@ input[type='search'] {
     text-transform: uppercase;
     font-size: 0.6rem;
     padding: 5px 8px;
-    color: #FFFDD8;
+    color: white;
     font-weight: 900;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
@@ -506,7 +523,4 @@ input[type='search'] {
     color: var(--c-footer-text);
     padding-top: 30px;
     padding-bottom: 30px;
-}
-.footer img{
-    height: 60px;
 }

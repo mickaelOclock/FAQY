@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="robots" content="index,follow" />
-        <title>💡 Help Center | We are here to help!</title>
+        <title>💡 FAQ Accompagnement TP | Par O'clock!</title>
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="350" />
         <meta name="msapplication-TileColor" content="#000000" />
@@ -18,89 +18,72 @@
         <!-- customize this visual settings -->
         <style>
             @font-face {
-                font-family: 'Inter';
+                font-family: 'Oclock';
                 font-style: normal;
                 font-weight: 700;
                 font-display: swap;
-                src: url('Inter-Bold.woff2?v=3.15') format('woff2'),
-                    url('Inter-Bold.woff?v=3.15') format('woff');
+                src: url('oclock-regular.woff2') format('woff2');
             }
             :root {
                 --f-default-family: -apple-system, BlinkMacSystemFont,
-                    'Segoe UI', Helvetica, Arial, sans-serif,
+                    'Oclock','Segoe UI', Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-                --f-headline-family: 'Inter', sans-serif;
-                --c-body-background: #ffffff;
-                --c-nav-bg: #111111;
-                --c-nav-font: #ffffff;
-                --c-search-headline: #ffffff;
-                --c-search-placeholder: #ffffff;
-                --c-search-placeholder-clip: #ffffff;
-                --c-search-boxshadow: rgb(127, 130, 133) 0px 0px 10px;
-                --c-search-text: #4043c1;
-                --g-search-gradient: linear-gradient(
-                    125deg,
-                    rgba(245, 142, 101, 1) 10%,
-                    rgba(113, 71, 155, 1) 70%,
-                    rgba(4, 40, 142, 1) 150%
-                );
-                --g-moz-search-gradient: -moz-linear-gradient(
-                    125deg,
-                    rgba(245, Faq142, 101, 1) 10%,
-                    rgba(113, 71, 155, 1) 70%,
-                    rgba(4, 40, 142, 1) 150%
-                );
-                --g-webkit-search-gradient: -webkit-linear-gradient(
-                    125deg,
-                    rgba(245, 142, 101, 1) 10%,
-                    rgba(113, 71, 155, 1) 70%,
-                    rgba(4, 40, 142, 1) 150%
-                );
+                --f-headline-family: 'Oclock', sans-serif;
+                --c-body-background-dark: #150F00;
+                --c-body-background-light: #ffffff;
+                --c-nav-bg: #0AC3A7;
+                --c-nav-font: #FFFDD8;
+                --c-search-headline: #FFFDD8;
+                --c-search-placeholder: #FFFDD8;
+                --c-search-placeholder-clip:  #FFFDD8;
+                --c-search-boxshadow: rgb(204, 206, 209) 0px 0px 10px;
+                --c-search-text: #FFFDD8;
+                --g-search-bar-backround: #0BAF95;
                 --c-search-bg-fallback: rgb(245, 142, 101);
                 --icon-search: url('./search.svg');
-                --c-content-headline: #111;
-                --c-show-more-text: #111;
-                --c-show-more-text-hover: blue;
-                --c-box-bg: #efefef;
-                --c-box-bg-hover: rgba(0, 0, 0, 0.1);
-                --c-box-text: #111;
-                --c-footer-bg: rgba(10, 10, 10, 0.1);
-                --c-footer-text: black;
-                --c-modal-bg: #fff;
-                --c-modal-text: #000000;
-                --c-modal-a-text: #4043c1;
-                --c-modal-a-text-hover: blue;
-                --c-bg-modal-close: #eee;
+                --c-content-headline: #494949;
+                --c-show-more-text: #078686;
+                --c-show-more-text-hover: #0cbaba;
+                --c-box-bg: rgba(255, 255, 255,1);
+                --c-box-bg-hover: #0d1117;
+                --c-box-text: #000000;
+                --c-footer-bg: #150F00;
+                --c-footer-text: #aaaaaa;
+                --c-modal-bg: #0d1117;
+                --c-modal-text: #ffffff;
+                --c-modal-a-text: #0cbaba;
+                --c-modal-a-text-hover: #0ed1d1;
+                --c-bg-modal-close: #444;
             }
         </style>
         <script>
             var GITHUB_ISSUES_LINK =
-                'https://api.github.com/repos/good-lly/gh-pages-help-center/issues';
-            var GITHUB_ACCEPTED_CREATORS = ['good-lly'];
-            var GITHUB_ACCEPTED_LABELS = ['approved'];
-            var UNCATEGORIZED_LABEL = 'restUncategorizedEntries';
-            var ALL_LABEL = 'allEntries';
+                'https://api.github.com/repos/mickaelOclock/FAQY/issues';
+            var GITHUB_ACCEPTED_CREATORS = ['mickaeloclock', 'mickaelOclock'];
+            var GITHUB_ACCEPTED_LABELS = ['FAQ'];
+            var UNCATEGORIZED_LABEL = 'notset';
+            var ALL_LABEL = 'Tous';
             var ENTRIES_PER_VIEW = 5;
             var MAX_PAGES = 40;
             var NUM_RESULTS_PER_PAGE = 30;
         </script>
         <link rel="stylesheet" href="style.css" />
         <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
-
         <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
+    <body class="">
         <div class="topnav">
             <div class="container">
                 <div class="col-12">
-                    <a href="#home">Your Branding</a>
+                    <a href="#home">O'clock</a>
                 </div>
             </div>
         </div>
+       
         <div class="search" id="js-search">
             <div class="container">
-                <div class="col-12"><h1>Help Center</h1></div>
+                <div class="col-12"><h1>WHAT THE FAQ ?!</h1></div>
                 <div class="col-12">
                     <form action="#" id="search-form">
                         <input
@@ -108,8 +91,8 @@
                             id="js-search-bar"
                             maxlength="30"
                             class="search-bar"
-                            placeholder="How can we help?"
-                            aria-label="Search"
+                            placeholder="CHERCHEZ PAS, ON A RÉPONSE À TOUT"
+                            aria-label="ALLEZ HOP ! "
                             autocomplete="off"
                         />
                     </form>
@@ -119,24 +102,32 @@
         </div>
         <div class="container content" id="js-content">
             <div class="grid-wrapper">
-                <div class="col-4">
-                    <h3>Popular</h3>
+                <div class="col-3">
+                    <h3>Populaire</h3>
                     <div
                         class="content-box"
-                        data-label="popular"
+                        data-label="Populaire"
                         data-order="newest"
                     ></div>
                 </div>
-                <div class="col-4">
-                    <h3>How To</h3>
+                <div class="col-3">
+                    <h3>Organisation</h3>
                     <div
                         class="content-box"
-                        data-label="howto"
+                        data-label="Organisation"
                         data-order="newest"
                     ></div>
                 </div>
-                <div class="col-4">
-                    <h3>Recent</h3>
+                <div class="col-3">
+                    <h3>Méthodologie</h3>
+                    <div
+                        class="content-box"
+                        data-label="Méthodologie"
+                        data-order="newest"
+                    ></div>
+                </div>
+                <div class="col-3">
+                    <h3>Récent</h3>
                     <div
                         class="content-box"
                         data-label=""
@@ -148,8 +139,8 @@
 
         <div class="footer">
             <div class="container">
-                <div class="col-6">
-                    <span>Your Branding COPYRIGHT 2020</span>
+                <div class="col-12">
+                    <img src="https://oclock.io/images/common/logo-full.svg?v=2bd12253" />
                 </div>
                 <div class="col-6"></div>
             </div>
